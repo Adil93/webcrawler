@@ -28,6 +28,10 @@ public class WebCrawler implements IWebCrawler {
         logger.info("Initialized Web Crawler with a maximum depth set to {}", maxDepth);
     }
 
+    /**
+     * @param url starting point of crawl
+     * @return Set of strings which are the unique crawled urls for the given url
+     */
     public Set<String> crawl(String url) {
         Set<String> visited = new HashSet<String>();
         String baseUrl = StringUtil.getBaseUrl(url);
@@ -45,6 +49,15 @@ public class WebCrawler implements IWebCrawler {
         return visited;
     }
 
+    /**
+     * @param level   depth of the crawling
+     * @param baseUrl base url of the given url
+     * @param url     starting point of the crawl
+     * @param visited populating set containing unique crawled urls
+     *                1. Followed the Breadth First Search Algorithm to recursively
+     *                call each links to get the related links.
+     *                2. Call until level is greater than equal to maxDepth set
+     */
     private void crawl(int level, String baseUrl, String url, Set<String> visited) {
         if (level >= maxDepth) return;
 
