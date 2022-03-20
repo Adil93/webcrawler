@@ -77,6 +77,7 @@ public class WebCrawlerProcessor implements IProcessor {
             crawlRelatedUrls(childCrawler);
         }
     }
+
     /**
      * 1. Loop through the contained URLs for the given parent URL
      * 2. Crawl each child URLs with incremented depth of its parent level
@@ -122,11 +123,14 @@ public class WebCrawlerProcessor implements IProcessor {
      * Logs the Summary of the Web Crawling
      */
     private void logSummary() {
-        logger.info("\n\n*** SUMMARY ***\n\nCrawling URL={} \nMaximum Depth={} \nTotal Crawled URLs={}",
-                startUrl, maxDepth, processedUrls.size());
         if (baseUrl != null) {
-            logger.info("Starting with Base URL = {}", baseUrl);
+            logger.info("\n\n*** SUMMARY ***\n\nCrawling URL={} \nMaximum Depth={} \nStarting with base URL={} \nTotal Crawled URLs={}",
+                    startUrl, maxDepth, baseUrl, processedUrls.size());
+        } else {
+            logger.info("\n\n*** SUMMARY ***\n\nCrawling URL={} \nMaximum Depth={} \nTotal Crawled URLs={}",
+                    startUrl, maxDepth, processedUrls.size());
         }
+        logger.info("Log Location= logs/crawler.log");
     }
 
     public int getMaxDepth() {
