@@ -34,7 +34,7 @@ From the project root folder, Execute below steps:
 - Ignored interrupted and timeout calls to URLs while visiting.
 - No Pause time specified for the future list empty check.
 - Default executor service thread count is set to 4 (Considering URLs starting with a base URL and a maximum depth, 4 threads will be good enough).
-- Considered <url>, <url>/ and <url>/# the same, Only the <url> will be stored in the list.
+- Considered {url}, {url}/ and {url}/# the same, Only the {url} will be stored in the list.
 - Not fetching URLs ending with .pdf extensions.
 
 ## Future Scope
