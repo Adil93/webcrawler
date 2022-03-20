@@ -8,6 +8,11 @@ import org.jsoup.nodes.Element;
 
 import java.util.Optional;
 
+/**
+ * @author Adil Muthukoya
+ * 1. Web crawler crawling a URL to get its related links
+ *
+ */
 public class WebCrawler extends AbstractCrawler {
 
     private static final Logger logger = new Logger(WebCrawler.class);
@@ -24,6 +29,7 @@ public class WebCrawler extends AbstractCrawler {
      */
 
     public void crawl() {
+        logger.info(">> Crawling Level={}, URL={}", this.getDepth(), this.getUrl());
         Optional<Document> doc = RequestUtil.fetch(this.getUrl());
         if (doc.isPresent()) {
             for (Element element : doc.get().select(WebCrawler.A_HREF_TAG)) {
@@ -37,7 +43,7 @@ public class WebCrawler extends AbstractCrawler {
 
     @Override
     public WebCrawler call() throws Exception {
-        logger.info(">> Crawling Level={}, URL={}", this.getDepth(), this.getUrl());
+
         crawl();
         return this;
     }
