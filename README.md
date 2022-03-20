@@ -3,6 +3,7 @@ A Multithreaded Java Web Crawler Application
 
 - Given the start URL and Maximum depth
 - Will crawl the child URLs asynchronously and store the List of unique URLs and out is stored in log file.
+- Made use of Jsoup Library for HTML parsing
 
 ## Steps to Run
 
@@ -34,6 +35,7 @@ A Multithreaded Java Web Crawler Application
 - Ignored interrupted and timeout calls to URLs while visiting.
 - No Pause time specified for the future list empty check.
 - Default executor service thread count is set to 4 (Considering URLs starting with a base URL and a maximum depth, 4 threads will be good enough).
+- Considered <url>, <url>/ and <url>/# the same, will consider <url> in the unique visited list.
 
 ## Future Scope
 
