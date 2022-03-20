@@ -11,7 +11,7 @@ public class StringUtil {
     private static final Logger logger = new Logger(StringUtil.class);
 
     public static String removeTrailingSlashAndHash(String str) {
-        if (str.endsWith("/") || str.endsWith("#")) {
+        if (str.endsWith("/")) {
             str = str.substring(0, str.length() - 1);
         } else if (str.endsWith("/#")) {
             str = str.substring(0, str.length() - 2);
@@ -28,5 +28,9 @@ public class StringUtil {
             logger.error("Malformed url: {}", path);
             return null;
         }
+    }
+
+    public static boolean isNullOrEmpty(String str) {
+        return str == null || "".equals(str);
     }
 }
