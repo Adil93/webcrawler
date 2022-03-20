@@ -1,8 +1,6 @@
 package com.monzo.webcrawler.processor;
 
-import com.monzo.webcrawler.service.WebCrawler;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 
 public class WebCrawlerProcessorTest {

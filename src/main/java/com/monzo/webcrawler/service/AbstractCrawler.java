@@ -1,7 +1,5 @@
 package com.monzo.webcrawler.service;
 
-import com.monzo.webcrawler.util.Logger;
-
 import java.util.HashSet;
 import java.util.Set;
 import java.util.concurrent.Callable;
