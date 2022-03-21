@@ -1,5 +1,5 @@
 # Web Crawler
-A Java MultiThreaded Web Crawler Application
+A Java Multi-Threaded Web Crawler Application
 
 - Given the start URL, The application will crawl all the child URLs and its recursive URLs asynchronously and store the list of unique URLs and out is stored in a log file.
 - Made use of Jsoup Library for HTML parsing
