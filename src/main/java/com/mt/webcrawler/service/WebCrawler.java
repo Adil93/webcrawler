@@ -1,8 +1,8 @@
-package com.monzo.webcrawler.service;
+package com.mt.webcrawler.service;
 
-import com.monzo.webcrawler.util.Logger;
-import com.monzo.webcrawler.util.RequestUtil;
-import com.monzo.webcrawler.util.StringUtil;
+import com.mt.webcrawler.util.Logger;
+import com.mt.webcrawler.util.RequestUtil;
+import com.mt.webcrawler.util.StringUtil;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
@@ -32,7 +32,7 @@ public class WebCrawler extends AbstractCrawler {
         logger.info(">> Crawling Level={}, URL={}", this.getDepth(), this.getUrl());
         Optional<Document> doc = RequestUtil.fetch(this.getUrl());
         if (doc.isPresent()) {
-            for (Element element : doc.get().select(WebCrawler.A_HREF_TAG)) {
+            for (Element element : doc.get().select(A_HREF_TAG)) {
                 String href = element.attr(HREF_TAG);
                 if (StringUtil.isNullOrEmpty(href) || href.startsWith("#"))
                     continue;

@@ -1,4 +1,4 @@
-package com.monzo.webcrawler.util;
+package com.mt.webcrawler.util;
 
 import java.net.MalformedURLException;
 import java.net.URL;

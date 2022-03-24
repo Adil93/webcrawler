@@ -1,8 +1,8 @@
-package com.monzo.webcrawler.processor;
+package com.mt.webcrawler.processor;
 
-import com.monzo.webcrawler.service.WebCrawler;
-import com.monzo.webcrawler.util.Logger;
-import com.monzo.webcrawler.util.StringUtil;
+import com.mt.webcrawler.service.WebCrawler;
+import com.mt.webcrawler.util.Logger;
+import com.mt.webcrawler.util.StringUtil;
 
 import java.time.LocalDateTime;
 import java.util.*;

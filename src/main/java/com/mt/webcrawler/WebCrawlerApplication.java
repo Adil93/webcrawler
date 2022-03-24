@@ -1,6 +1,6 @@
-package com.monzo.webcrawler;
+package com.mt.webcrawler;
 
-import com.monzo.webcrawler.processor.WebCrawlerProcessor;
+import com.mt.webcrawler.processor.WebCrawlerProcessor;
 
 /**
  * @author Adil Muthukoya

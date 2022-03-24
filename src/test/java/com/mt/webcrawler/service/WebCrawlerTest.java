@@ -1,4 +1,4 @@
-package com.monzo.webcrawler.service;
+package com.mt.webcrawler.service;
 
 import org.junit.Assert;
 import org.junit.Test;

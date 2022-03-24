@@ -1,4 +1,4 @@
-package com.monzo.webcrawler.service;
+package com.mt.webcrawler.service;
 
 import java.util.HashSet;
 import java.util.Set;

@@ -9,8 +9,8 @@ A Java Multi-Threaded Web Crawler Application
 From the project root folder, Execute below steps:
 - mvn install 
 - mvn clean compile assembly:single
-- java -cp target/webcrawler-1.0-SNAPSHOT-jar-with-dependencies.jar com.monzo.webcrawler.WebCrawlerApplication {url} {maxDepth}
-- eg: java -cp target/webcrawler-1.0-SNAPSHOT-jar-with-dependencies.jar com.monzo.webcrawler.WebCrawlerApplication https://monzo.com 3
+- java -cp target/webcrawler-1.0-SNAPSHOT-jar-with-dependencies.jar WebCrawlerApplication {url} {maxDepth}
+- eg: java -cp target/webcrawler-1.0-SNAPSHOT-jar-with-dependencies.jar WebCrawlerApplication https://monzo.com 3
 - Default URL : https://monzo.com, Default depth: 2147483647 (Integer.MAX_VALUE)
 
 ## Run Test
