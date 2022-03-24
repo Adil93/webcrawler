@@ -36,7 +36,6 @@ public class WebCrawlerProcessor implements IProcessor {
         futures = new ArrayList<>();
         baseUrl = StringUtil.getBaseUrl(startUrl);
 
-
     }
 
     /**
@@ -98,7 +97,7 @@ public class WebCrawlerProcessor implements IProcessor {
      * @param url
      * @param depth
      */
-    private void crawlUrl(String url, int depth) {
+    private synchronized void crawlUrl(String url, int depth) {
         if (canCrawl(url, depth)) {
             processedUrls.put(url, LocalDateTime.now());
             WebCrawler crawler = new WebCrawler(url, depth);
